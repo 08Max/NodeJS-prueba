@@ -1,0 +1,4 @@
+name: LOCALHOST
+values:
+  - key: URL
+    value: ''
