@@ -9,7 +9,7 @@ module.exports = {
     },
     prueba: async (req,res) => {
         try {
-            console.log("Ejecutando prueba")
+            console.log("Ejecutando prueba usuario")
             res.json({
                 message: "Hola mundo"
             })
