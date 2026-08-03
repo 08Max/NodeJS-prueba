@@ -1,0 +1,8 @@
+$kind: http-request
+name: Listar usuarios
+url: "{{URL}}/api/usuarios/listar"
+method: GET
+body:
+  type: json
+  content: ""
+order: 1784739357391

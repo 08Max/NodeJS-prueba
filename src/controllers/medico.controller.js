@@ -1,12 +1,38 @@
 const models = require('../database/models/index')
 module.exports = {
     listar: async (req,res) => {
-
+        const medicos = await models.medico.findAll()
+        res.json({
+            success: true,
+            data: {
+                medicos: medicos
+            }
+        })
     },
     crear: async (req,res) => {
-
+        const medico = await models.medico.create(req.body)
+        /* cuando lo que viene en la request coincide con las columnas de la tabla,
+        * sequelize lo va a mapear automaticamente y va a crear el registro en la tabla
+        */
+        res.json({
+            success: true,
+            data: {
+                medico: medico
+            }
+        })
     },
     listarInfo: async (req,res) => {
+        const medico = await models.medico.findOne({
+            where: {
+                id: req.params.idMedico
+            }
+        })
+        res.json({
+            success: true,
+            data: {
+                medico: medico
+            }
+        })
     },
     prueba: async (req,res) => {
         try {

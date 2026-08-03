@@ -2,3 +2,4 @@ name: LOCALHOST
 values:
   - key: URL
     value: ''
+color: 120

@@ -22,16 +22,16 @@ module.exports = {
         })
         // de lo contrario se debe pegarle manualmente a cada columna, el valor correspondiente del body
         // ejemplo:
-        res.json({
-            success: true,
-            data: {
-                usuario: {
-                    id: usuario.id,
-                    nombre: req.body.nombre,
-                    apellido: req.body.apellido,
-                }
-            }
-        })
+        // res.json({
+        //     success: true,
+        //     data: {
+        //         usuario: {
+        //             id: usuario.id,
+        //             nombre: req.body.nombre,
+        //             apellido: req.body.apellido,
+        //         }
+        //     }
+        // })
     },
     listarInfo: async (req,res) => {
         const usuario = await models.usuario.findOne({
