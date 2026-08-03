@@ -1,0 +1,18 @@
+$kind: http-request
+name: Crear medico
+url: "{{URL}}/api/medicos/"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"id\": 1,\r
+
+    \    \"nombre\": \"Medico1\",\r
+
+    \    \"apellido\": \"apellidoMedico1\",\r
+
+    \    \"edad\": 40\r
+
+    }"
+order: 1474950865023500

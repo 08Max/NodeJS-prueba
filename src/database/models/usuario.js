@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
         },
         edad: {
-            type: DataTypes.INT,
+            type: DataTypes.BIGINT,
         },
         createdAt: { // fecha de creacion
             type: DataTypes.DATE, // tipo de dato

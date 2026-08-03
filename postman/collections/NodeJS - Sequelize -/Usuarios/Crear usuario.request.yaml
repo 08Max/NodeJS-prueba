@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{URL}}/api/usuarios/"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"id\": 1,\r
+
+    \    \"nombre\": \"Medico1\",\r
+
+    \    \"apellido\": \"Apellido1\",\r
+
+    \    \"email\": \"email1@aasd.com\",\r
+
+    \    \"edad\": 50\r
+
+    }"
+order: 238401398064008
