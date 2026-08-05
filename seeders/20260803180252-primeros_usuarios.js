@@ -16,19 +16,26 @@ module.exports = {
         ([
           models.usuario.findOrCreate({
             where: {
-                id: "1"
+                id: "3"
             },
             defaults: {
-              nombre : "Usuario1",
+              nombre : "Usuario3",
               apellido : "JS",
               email : "prueba@prueba.com",
               edad: "26",
-              created_at: "2024-06-08 00:00:00",
-                updated_at: "2024-06-08 00:00:00"
-
             }
-          }
-
+          }),
+          models.usuario.findOrCreate({
+            where: {
+                id: "4"
+            },
+            defaults: {
+              nombre : "Usuario4",
+              apellido : "JS",
+              email : "prueba@prueba.com",
+              edad: "26",
+            }
+          })
         ])
     )
   },
