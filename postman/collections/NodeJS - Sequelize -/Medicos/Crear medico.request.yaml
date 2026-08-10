@@ -6,13 +6,15 @@ body:
   type: json
   content: "{\r
 
-    \    \"id\": 1,\r
+    \    \"nombre\": \"Juan\",\r
 
-    \    \"nombre\": \"Medico1\",\r
+    \    \"apellido\": \"Perez\",\r
 
-    \    \"apellido\": \"apellidoMedico1\",\r
+    \    \"email\": \"juanperez@gmail.com\",\r
 
-    \    \"edad\": 40\r
+    \    \"especialidad\": \"ciruja\",\r
+
+    \    \"tiempo_trabajando\": 5\r
 
     }"
 order: 1474950865023500

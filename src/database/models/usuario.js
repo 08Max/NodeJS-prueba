@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Usuario.associate = models => {
         // aca se relacionan las tablas de la base de datos
+        
     }
 
     return Usuario
