@@ -1,7 +1,9 @@
 const express = require('express');
 const globalConstants = require('./const/globalConstants');
 const routerConfig = require('./routes/index.routes.js')
-const errorHandler = require('./middlewares/error');
+const errorHandler = require('./middlewares/error.js');
+const createError = require('http-errors');
+
 const configuracionApi = (app) => {
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
@@ -9,6 +11,9 @@ const configuracionApi = (app) => {
 
 const configuracionRouter = (app) => {
     app.use('/api', routerConfig.rutas_init())
+    app.use(function(req, res, next) {
+        next(createError(404) ); // Manejo de rutas no encontradas
+    })
     app.use(errorHandler);
 }
 

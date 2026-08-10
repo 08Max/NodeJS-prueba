@@ -16,5 +16,9 @@ module.exports = (err, req, res, next) => {
         response.error.code = errors[errorKey].code;
         response.error.message = errors[errorKey].message;
     }
+    if (err.message === 'Not found'){
+        response.error.code = 404;
+        response.error.message = 'Not found';
+    }
     res.status(200).json(response);
 }

@@ -1,4 +1,5 @@
 const models = require('../database/models/index')
+const errors = require('../const/errors');
 module.exports = {
     listar: async (req,res) => {
         const usuarios = await models.usuario.findAll()
@@ -20,12 +21,13 @@ module.exports = {
             next(error);
         }
     },
-    listarInfo: async (req,res) => {
+    listarInfo: async (req,res,next) => {
         const usuario = await models.usuario.findOne({
             where: {
                 id: req.params.idUsuario
             }
         })
+        if (!usuario) return next(errors.UsuarioInexistente)
         res.json({
             success: true,
             data: {
