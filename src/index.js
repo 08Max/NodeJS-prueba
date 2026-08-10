@@ -1,6 +1,7 @@
 const express = require('express');
 const globalConstants = require('./const/globalConstants');
 const routerConfig = require('./routes/index.routes.js')
+const errorHandler = require('./middlewares/error');
 const configuracionApi = (app) => {
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
@@ -8,6 +9,7 @@ const configuracionApi = (app) => {
 
 const configuracionRouter = (app) => {
     app.use('/api', routerConfig.rutas_init())
+    app.use(errorHandler);
 }
 
 const init = () => {
