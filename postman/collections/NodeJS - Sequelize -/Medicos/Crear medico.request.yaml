@@ -1,5 +1,4 @@
 $kind: http-request
-name: Crear medico
 url: "{{URL}}/api/medicos/"
 method: POST
 body:
@@ -17,4 +16,4 @@ body:
     \    \"tiempo_trabajando\": 5\r
 
     }"
-order: 1474950865023500
+order: 2000

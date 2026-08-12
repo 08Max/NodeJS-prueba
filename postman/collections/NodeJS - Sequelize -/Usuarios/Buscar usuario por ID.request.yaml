@@ -1,5 +1,4 @@
 $kind: http-request
-name: Buscar usuario por ID
 url: "{{URL}}/api/usuarios/idUsuario"
 method: GET
-order: 2443795276688265
+order: 3000

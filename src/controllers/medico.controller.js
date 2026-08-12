@@ -1,13 +1,26 @@
 const models = require('../database/models/index')
 module.exports = {
     listar: async (req,res) => {
-        const medicos = await models.medico.findAll()
-        res.json({
-            success: true,
-            data: {
-                medicos: medicos
-            }
-        })
+        try {
+            const medicos = await models.medico.findAll({
+                    include: [{
+                        model: models.paciente_medico,
+                        include: [{
+                            model: models.paciente
+                        }]
+                    }]
+                }
+            )
+
+            res.json({
+                success: true,
+                data: {
+                    medicos: medicos
+                }
+            })
+        } catch (error) {
+            return next(error);
+        }
     },
     crear: async (req,res) => {
         const medico = await models.medico.create(req.body)

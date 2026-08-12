@@ -1,5 +1,4 @@
 $kind: http-request
-name: Crear usuario
 url: "{{URL}}/api/usuarios"
 method: POST
 body:
@@ -15,4 +14,4 @@ body:
     \    \"email\": \"assd@lasl\"\r
 
     }"
-order: 238401398064008
+order: 2000

@@ -1,5 +1,4 @@
 $kind: http-request
-name: Listar medicos
 url: "{{URL}}/api/medicos/listar"
 method: GET
-order: 1785770827809
+order: 1000

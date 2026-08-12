@@ -1,5 +1,4 @@
 $kind: http-request
-name: Listar usuarios
 url: "{{URL}}/api/usuarios/idUsuario"
 method: GET
-order: 1784739357391
+order: 1000

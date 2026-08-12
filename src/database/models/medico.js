@@ -50,7 +50,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Medico.associate = models => {
         // aca se relacionan las tablas de la base de datos
-        Medico.hasMany(models.paciente);
+        Medico.hasMany(models.paciente_medico);
     }
 
     return Medico

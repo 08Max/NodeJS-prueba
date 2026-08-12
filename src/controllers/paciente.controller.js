@@ -13,6 +13,10 @@ module.exports = {
     crear: async (req, res, next) => {
         try {
             const paciente = await models.paciente.create(req.body)
+            const relacion = await models.paciente_medico.create({
+                pacienteId: paciente.id,
+                medicoId: req.body.medicoId
+            })
             res.json({
                 success: true,
                 data: { paciente: paciente }
@@ -27,7 +31,10 @@ module.exports = {
                 id: req.params.idPaciente
             },
             include: [{
-                model: models.medico,
+                model: models.paciente_medico,
+                include: [{
+                    model: models.medico
+                }]
             }]
         })
         if (!paciente) return next(errors.UsuarioInexistente)
