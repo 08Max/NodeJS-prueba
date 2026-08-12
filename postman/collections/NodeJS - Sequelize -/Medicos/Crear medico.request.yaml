@@ -1,19 +1,20 @@
 $kind: http-request
+name: Crear medico
 url: "{{URL}}/api/medicos/"
 method: POST
 body:
   type: json
   content: "{\r
 
-    \    \"nombre\": \"Juan\",\r
+    \    \"nombre\": \"Medico02\",\r
 
-    \    \"apellido\": \"Perez\",\r
+    \    \"apellido\": \"ApellidoMedico02\",\r
 
     \    \"email\": \"juanperez@gmail.com\",\r
 
     \    \"especialidad\": \"ciruja\",\r
 
-    \    \"tiempo_trabajando\": 5\r
+    \    \"tiempo_trabajando\": 10\r
 
     }"
 order: 2000

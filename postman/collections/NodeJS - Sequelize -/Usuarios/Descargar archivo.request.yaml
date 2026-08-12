@@ -1,0 +1,14 @@
+$kind: http-request
+name: Descargar archivo
+url: "{{URL}}/api/usuarios/descargarArchivo"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"usuarioId\": 1,\r
+
+    \    \"nombre\": \"archivo01\"\r
+
+    }"
+order: 3609524278327793

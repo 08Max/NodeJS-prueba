@@ -1,19 +1,20 @@
 $kind: http-request
+name: Crear
 url: "{{URL}}/api/pacientes/"
 method: POST
 body:
   type: json
   content: "{\r
 
-    \    \"nombre\": \"paciente_nom01\",\r
+    \    \"nombre\": \"paciente_nom03\",\r
 
-    \    \"apellido\": \"paciente_ape01\",\r
+    \    \"apellido\": \"paciente_ape03\",\r
 
     \    \"edad\": \"35\",\r
 
     \    \"obra_social\": \"IOMA\",\r
 
-    \    \"medicoId\": 1    \r
+    \    \"medicoId\": 2    \r
 
     \r
 

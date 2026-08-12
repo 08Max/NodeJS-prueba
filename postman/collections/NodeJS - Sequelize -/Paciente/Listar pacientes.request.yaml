@@ -1,4 +1,5 @@
 $kind: http-request
-url: ""
+name: Listar pacientes
+url: "{{URL}}/api/pacientes/listar"
 method: GET
 order: 3897139498320140

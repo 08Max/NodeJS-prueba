@@ -1,4 +1,5 @@
 $kind: http-request
-url: ""
-method: GET
+name: Crear relacion
+url: "{{URL}}/api/pacientes/listar"
+method: POST
 order: 4105420736796124

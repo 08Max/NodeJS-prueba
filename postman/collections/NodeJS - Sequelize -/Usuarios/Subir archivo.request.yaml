@@ -1,0 +1,24 @@
+$kind: http-request
+name: Subir archivo
+url: "{{URL}}/api/usuarios/subirArchivo"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: file
+      key: jpg
+      src:
+        - /C:/Users/Usuario/Pictures/asd.jpg
+      description: ""
+      disabled: false
+    - type: text
+      key: usuarioId
+      value: "1"
+      description: ""
+      disabled: false
+    - type: text
+      key: nombre
+      value: archivo01
+      description: ""
+      disabled: false
+order: 3393921098973922
